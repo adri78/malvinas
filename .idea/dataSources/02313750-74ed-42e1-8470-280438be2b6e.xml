@@ -12,415 +12,457 @@
     <schema id="6" parent="1" name="r"/>
     <schema id="7" parent="1" name="stockcm"/>
     <schema id="8" parent="1" name="sys"/>
-    <table id="9" parent="2" name="t_chofer"/>
-    <table id="10" parent="2" name="t_clientes"/>
-    <table id="11" parent="2" name="t_distancia"/>
-    <table id="12" parent="2" name="t_modo"/>
-    <table id="13" parent="2" name="t_movil"/>
-    <table id="14" parent="2" name="t_operadora"/>
-    <table id="15" parent="2" name="t_turno"/>
-    <table id="16" parent="2" name="t_viaje"/>
-    <table id="17" parent="2" name="tvkm"/>
-    <table id="18" parent="2" name="ver"/>
-    <column id="19" parent="9" name="idch">
+    <schema id="9" parent="1" name="eje"/>
+    <schema id="10" parent="1" name="magento"/>
+    <table id="11" parent="2" name="t_chofer"/>
+    <table id="12" parent="2" name="t_clientes"/>
+    <table id="13" parent="2" name="t_distancia"/>
+    <table id="14" parent="2" name="t_modo"/>
+    <table id="15" parent="2" name="t_movil"/>
+    <table id="16" parent="2" name="t_operadora"/>
+    <table id="17" parent="2" name="t_turno"/>
+    <table id="18" parent="2" name="t_version"/>
+    <table id="19" parent="2" name="t_viaje"/>
+    <table id="20" parent="2" name="tvkm"/>
+    <table id="21" parent="2" name="ver"/>
+    <column id="22" parent="11" name="idch">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="20" parent="9" name="Nombre">
+    <column id="23" parent="11" name="Nombre">
       <Position>2</Position>
       <DataType>varchar(80)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="21" parent="9" name="Celu">
+    <column id="24" parent="11" name="Celu">
       <Position>3</Position>
       <DataType>varchar(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="22" parent="9" name="Tel">
+    <column id="25" parent="11" name="Tel">
       <Position>4</Position>
       <DataType>int(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="23" parent="9" name="Reg">
+    <column id="26" parent="11" name="Reg">
       <Position>5</Position>
       <DataType>varchar(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="24" parent="9" name="Domicilio">
+    <column id="27" parent="11" name="Domicilio">
       <Position>6</Position>
       <DataType>varchar(220)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="25" parent="9" name="Status">
+    <column id="28" parent="11" name="Status">
       <Position>7</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="26" parent="9" name="PRIMARY">
+    <key id="29" parent="11" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idch</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="27" parent="10" name="idcli">
+    <column id="30" parent="12" name="idcli">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="28" parent="10" name="Cliente">
+    <column id="31" parent="12" name="Cliente">
       <Position>2</Position>
       <DataType>varchar(100)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="29" parent="10" name="Telefono">
+    <column id="32" parent="12" name="Telefono">
       <Position>3</Position>
       <DataType>int(35)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="30" parent="10" name="Domicilio">
+    <column id="33" parent="12" name="Domicilio">
       <Position>4</Position>
       <DataType>varchar(200)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="31" parent="10" name="Codigo">
+    <column id="34" parent="12" name="Codigo">
       <Position>5</Position>
       <DataType>varchar(8)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="32" parent="10" name="PRIMARY">
+    <key id="35" parent="12" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idcli</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="33" parent="11" name="iddis">
+    <column id="36" parent="13" name="iddis">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="34" parent="11" name="Lugar">
+    <column id="37" parent="13" name="Lugar">
       <Position>2</Position>
       <DataType>varchar(100)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="35" parent="11" name="distancia">
+    <column id="38" parent="13" name="distancia">
       <Position>3</Position>
       <DataType>float|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="36" parent="11" name="iddis">
+    <index id="39" parent="13" name="iddis">
       <ColNames>iddis</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="37" parent="11" name="PRIMARY">
+    <key id="40" parent="13" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>iddis</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="38" parent="11" name="iddis">
+    <key id="41" parent="13" name="iddis">
       <ColNames>iddis</ColNames>
       <UnderlyingIndexName>iddis</UnderlyingIndexName>
     </key>
-    <column id="39" parent="12" name="idmo">
+    <column id="42" parent="14" name="idmo">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="40" parent="12" name="elmodo">
+    <column id="43" parent="14" name="elmodo">
       <Position>2</Position>
       <DataType>varchar(30)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="41" parent="12" name="codmodo">
+    <column id="44" parent="14" name="codmodo">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="42" parent="12" name="PRIMARY">
+    <key id="45" parent="14" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idmo</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="43" parent="13" name="idm">
+    <column id="46" parent="15" name="idm">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="44" parent="13" name="movil">
+    <column id="47" parent="15" name="movil">
       <Position>2</Position>
       <DataType>varchar(8)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="45" parent="13" name="auto">
+    <column id="48" parent="15" name="auto">
       <Position>3</Position>
       <DataType>varchar(50)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="46" parent="13" name="patente">
+    <column id="49" parent="15" name="patente">
       <Position>4</Position>
       <DataType>varchar(16)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="47" parent="13" name="seguro">
+    <column id="50" parent="15" name="seguro">
       <Position>5</Position>
       <DataType>varchar(16)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="48" parent="13" name="MM">
+    <column id="51" parent="15" name="MM">
       <Position>6</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="49" parent="13" name="duenio">
+    <column id="52" parent="15" name="duenio">
       <Position>7</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="50" parent="13" name="PRIMARY">
+    <key id="53" parent="15" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idm</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="51" parent="14" name="idop">
+    <column id="54" parent="16" name="idop">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="52" parent="14" name="Nombre">
+    <column id="55" parent="16" name="Nombre">
       <Position>2</Position>
       <DataType>varchar(80)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="53" parent="14" name="Tel">
+    <column id="56" parent="16" name="Tel">
       <Position>3</Position>
       <DataType>varchar(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="54" parent="14" name="DNI">
+    <column id="57" parent="16" name="DNI">
       <Position>4</Position>
       <DataType>varchar(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="55" parent="14" name="Domicilio">
+    <column id="58" parent="16" name="Domicilio">
       <Position>5</Position>
       <DataType>varchar(220)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="56" parent="14" name="tipo">
+    <column id="59" parent="16" name="tipo">
       <Position>6</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="57" parent="14" name="PRIMARY">
+    <key id="60" parent="16" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idop</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="58" parent="15" name="idtur">
+    <column id="61" parent="17" name="idtur">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="59" parent="15" name="choid">
+    <column id="62" parent="17" name="choid">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="60" parent="15" name="autoid">
+    <column id="63" parent="17" name="autoid">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="61" parent="15" name="feini">
+    <column id="64" parent="17" name="feini">
       <Position>4</Position>
       <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="62" parent="15" name="fecie">
+    <column id="65" parent="17" name="fecie">
       <Position>5</Position>
       <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="63" parent="15" name="kmini">
+    <column id="66" parent="17" name="kmini">
       <Position>6</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="64" parent="15" name="kmfin">
+    <column id="67" parent="17" name="kmfin">
       <Position>7</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="65" parent="15" name="um">
+    <column id="68" parent="17" name="um">
       <Position>8</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="66" parent="15" name="opini">
-      <Position>9</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="67" parent="15" name="opfin">
+    <column id="69" parent="17" name="opini">
       <Position>10</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="68" parent="15" name="monto">
+    <column id="70" parent="17" name="opfin">
       <Position>11</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="71" parent="17" name="monto">
+      <Position>12</Position>
       <DataType>float|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="69" parent="15" name="estado">
-      <Position>12</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <key id="70" parent="15" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>idtur</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="71" parent="16" name="idv">
-      <Position>1</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-    </column>
-    <column id="72" parent="16" name="fr">
-      <Position>2</Position>
-      <DataType>datetime|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="73" parent="16" name="fs">
-      <Position>3</Position>
-      <DataType>datetime|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="74" parent="16" name="fv">
-      <Position>4</Position>
-      <DataType>datetime|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="75" parent="16" name="ft">
-      <Position>5</Position>
-      <DataType>datetime|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="76" parent="16" name="opr">
-      <Position>6</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="77" parent="16" name="ops">
-      <Position>7</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="78" parent="16" name="opv">
-      <Position>8</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="79" parent="16" name="opt">
-      <Position>9</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="80" parent="16" name="cliid">
-      <Position>10</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="81" parent="16" name="Origen">
-      <Position>11</Position>
-      <DataType>varchar(150)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="82" parent="16" name="Destino">
-      <Position>12</Position>
-      <DataType>varchar(150)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="83" parent="16" name="turid">
+    <column id="72" parent="17" name="estado">
       <Position>13</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="84" parent="16" name="valor">
-      <Position>14</Position>
+    <column id="73" parent="17" name="umt">
+      <Position>9</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <key id="74" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idtur</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <trigger id="75" parent="17" name="t_turno_before_insert">
+      <Turn>before-row</Turn>
+      <Events>I</Events>
+    </trigger>
+    <trigger id="76" parent="17" name="t_turno_before_update">
+      <Turn>before-row</Turn>
+      <Events>U</Events>
+    </trigger>
+    <trigger id="77" parent="17" name="t_turno_before_delete">
+      <Turn>before-row</Turn>
+      <Events>D</Events>
+    </trigger>
+    <column id="78" parent="18" name="idv">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="79" parent="18" name="tabla">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="80" parent="18" name="ver">
+      <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="85" parent="16" name="pago">
-      <Position>15</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="86" parent="16" name="EstaV">
-      <Position>16</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <key id="87" parent="16" name="PRIMARY">
+    <key id="81" parent="18" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idv</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="88" parent="17" name="idvkm">
+    <column id="82" parent="19" name="idv">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="89" parent="17" name="ValorKM">
+    <column id="83" parent="19" name="fr">
       <Position>2</Position>
-      <DataType>float|0</DataType>
+      <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="90" parent="17" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>idvkm</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="91" parent="18" name="idver">
-      <Position>1</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-    </column>
-    <column id="92" parent="18" name="U">
-      <Position>2</Position>
-      <DataType>varchar(10)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="93" parent="18" name="P">
+    <column id="84" parent="19" name="fs">
       <Position>3</Position>
-      <DataType>varchar(32)|0</DataType>
+      <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="94" parent="18" name="L">
+    <column id="85" parent="19" name="fv">
       <Position>4</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="95" parent="18" name="nreal">
+    <column id="86" parent="19" name="ft">
       <Position>5</Position>
-      <DataType>varchar(30)|0</DataType>
+      <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="96" parent="18" name="A">
+    <column id="87" parent="19" name="opr">
       <Position>6</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="97" parent="18" name="PRIMARY">
+    <column id="88" parent="19" name="ops">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="89" parent="19" name="opv">
+      <Position>8</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="90" parent="19" name="opt">
+      <Position>9</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="91" parent="19" name="cliid">
+      <Position>10</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="92" parent="19" name="Origen">
+      <Position>11</Position>
+      <DataType>varchar(150)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="93" parent="19" name="Destino">
+      <Position>12</Position>
+      <DataType>varchar(150)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="94" parent="19" name="turid">
+      <Position>13</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="95" parent="19" name="valor">
+      <Position>14</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="96" parent="19" name="pago">
+      <Position>15</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="97" parent="19" name="EstaV">
+      <Position>16</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="98" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idv</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="99" parent="20" name="idvkm">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="100" parent="20" name="ValorKM">
+      <Position>2</Position>
+      <DataType>float|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="101" parent="20" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idvkm</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="102" parent="21" name="idver">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="103" parent="21" name="U">
+      <Position>2</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="104" parent="21" name="P">
+      <Position>3</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="105" parent="21" name="L">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="106" parent="21" name="nreal">
+      <Position>5</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="107" parent="21" name="A">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="108" parent="21" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>idver</ColNames>
       <Primary>1</Primary>
